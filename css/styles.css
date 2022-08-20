@@ -96,10 +96,6 @@ img {
     color: var(--logo-color-third);
 }
 
-.current {
-    color: var(--text-color-hover);
-}
-
 .main-nav-link {
     font-weight: 500;
     font-size: 14px;
@@ -110,6 +106,9 @@ img {
     padding-top: 32px;
 }
 
+.current {
+    color: var(--text-color-hover);
+}
 
 .main-nav-link:hover,
 .main-nav-link:focus {
