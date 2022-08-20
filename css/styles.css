@@ -74,8 +74,14 @@ img {
     font-size: 26px;
     line-height: 1.19;
     /* identical to box height */
+
+}
+
+.page-logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     width: 145px;
-    height: 31px;
 }
 
 .logo-color-first {
@@ -95,7 +101,6 @@ img {
 }
 
 .main-nav-link {
-    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -111,25 +116,16 @@ img {
     color: var(--text-color-hover);
 }
 
-.page-logo {
-    display: block;
-    margin-right: 93px;
-}
-
 .page-nav {
     display: flex;
-    flex-direction: row;
     gap: 50px;
 }
 
 .page-address {
     display: flex;
     gap: 50px;
-    justify-content: flex-end;
     margin-left: auto;
 }
-
-.page-address:not(:last-child) {}
 
 /* ==============/HEADER============== */
 
@@ -149,11 +145,13 @@ img {
 
 .main-hero {
     background: var(--background-footer);
+
 }
 
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    width: 700px;
 }
 
 .hero-text {
@@ -165,16 +163,16 @@ img {
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 30px;
-    width: 696px;
-    margin-left: auto;
-    margin-right: auto;
+
+
 }
 
 .hero-button {
     font-family: 'Roboto';
     font-weight: 700;
     border-radius: 4px;
-    background: #2196F3;
+    border: none;
+    background: var(--text-color-hover);
     font-size: 16px;
     line-height: 1.88;
     display: flex;
@@ -183,17 +181,15 @@ img {
     letter-spacing: 0.06em;
     color: #FFFFFF;
     margin: auto;
-    width: 216px;
-    height: 50px;
-
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.main-title-button:hover,
-.main-title-button:focus {
+.hero-button:hover,
+.hero-button:focus {
     background: #188CE8;
+    border-color: #188CE8;
 }
-
-/* ==============/HERO================= */
 
 /* ==============BENEFITS================= */
 
@@ -222,7 +218,7 @@ img {
 .work {
     display: flex;
     gap: 30px;
-    padding-bottom: 94px;
+    margin-bottom: 94px;
 }
 
 /* ===============TEAM================= */
@@ -248,6 +244,8 @@ img {
 
 .team-case {
     background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card {
@@ -270,15 +268,7 @@ img {
     color: #757575;
 }
 
-/*==============footer styles=============*/
-.footer-logo {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.address {
-    font-style: normal;
-}
+/*==============FOOTER=============*/
 
 .page-footer {
     background: var(--background-footer);
@@ -288,10 +278,18 @@ img {
     padding-bottom: 60px;
 }
 
-.footer-address {
-    display: block;
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 145px;
+}
 
-    /* ВОТ ТУТ ОСТАНОВИЛАСЬ выяснить почему ли больше ссылок */
+.address {
+    font-style: normal;
+}
+
+.footer-address:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .page-footer-address {
@@ -311,6 +309,20 @@ img {
 
 /*-------portfolio styles-------*/
 
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.portfolio-menu {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+
+}
+
 .portfolio-menu-button {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -319,18 +331,37 @@ img {
     line-height: 1.62;
     color: var(--text-color);
     border-radius: 4px;
+    border: none;
     cursor: pointer;
     background: var(--background-color);
+    padding: 6px 22px;
 }
 
 .portfolio-menu-button:hover,
 .portfolio-menu-button:focus {
     background: var(--text-color-hover);
-    color: var(--logo-color-third)
+    color: var(--logo-color-third);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+
+.portfolio-projects {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
 .portfolio-projects-case {
-    border: 1px solid #EEEEEE;
+    display: block;
+
+}
+
+.portfolio-projects-card {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
 }
 
 .portfolio-projects-title {
@@ -339,6 +370,7 @@ img {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--text-color);
+    margin-bottom: 4px;
 }
 
 .portfolio-projects-text {
