@@ -53,7 +53,6 @@ img {
 
 .button {
     cursor: pointer;
-
 }
 
 /* ==============HEADER============== */
@@ -64,8 +63,6 @@ img {
 .page-header {
     display: flex;
     align-items: center;
-
-
 }
 
 .logo {
@@ -97,6 +94,7 @@ img {
 }
 
 .main-nav-link {
+    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -126,30 +124,20 @@ img {
     margin-left: auto;
 }
 
-/* ==============/HEADER============== */
-
-/* ==============HERO================= */
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+.page-address .main-nav-link {
+    color: #757575;
 }
 
-.main-hero {
-    background: var(--background-footer);
+/* ==============HERO================= */
 
+.main-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: var(--background-footer);
 }
 
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    display: block;
     width: 700px;
 }
 
@@ -162,8 +150,9 @@ img {
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 30px;
-
-
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-button {
@@ -191,12 +180,28 @@ img {
 }
 
 /* ==============BENEFITS================= */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .top-main-page {
     display: flex;
-    padding-top: 94px;
-    padding-bottom: 94px;
     gap: 30px;
+
 }
 
 .main-page {
@@ -215,9 +220,12 @@ img {
 
 /* ==============WORK=================== */
 .work {
+    padding-bottom: 94px;
+}
+
+.work-case {
     display: flex;
     gap: 30px;
-    margin-bottom: 94px;
 }
 
 /* ===============TEAM================= */
@@ -238,6 +246,7 @@ img {
 
 .team-box {
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -248,8 +257,7 @@ img {
 }
 
 .team-card {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
 }
 
 .team-title {
@@ -287,8 +295,10 @@ img {
     font-style: normal;
 }
 
-.footer-address:not(:last-child) {
-    margin-bottom: 9px;
+.footer-address {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .page-footer-address {
@@ -319,7 +329,6 @@ img {
     justify-content: center;
     margin-bottom: 50px;
     align-items: center;
-
 }
 
 .portfolio-menu-button {
